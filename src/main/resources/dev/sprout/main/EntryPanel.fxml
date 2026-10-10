@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane
+  xmlns:fx="http://javafx.com/fxml"
+  stylesheets="@css/app.css"
+  fx:controller="dev.sprout.main.controller.EntryPanelController"
+>
+  <left>
+    <fx:include
+      source="SidebarView.fxml"
+    />
+  </left>
+  <top>
+    <HBox
+      styleClass="header-panel"
+    >
+      <Label
+        text="Entries"
+        styleClass="app-title"
+      />
+    </HBox>
+  </top>
+  <center>
+    <VBox
+      styleClass="table-container"
+    >
+      <TableView
+        fx:id="tableEntries"
+        VBox.vgrow="ALWAYS"
+      >
+        <columns>
+          <TableColumn
+            text="TITLE"
+            fx:id="columnDate"
+            prefWidth="530"
+          />
+        </columns>
+      </TableView>
+    </VBox>
+  </center>
+  <bottom>
+    <VBox>
+      <HBox
+        styleClass="action-panel, filter-panel-first"
+      >
+        <VBox>
+          <Label
+            text="date:"
+            styleClass="filter-field"
+          />
+          <TextField
+            fx:id="textFieldDate"
+            styleClass="text-field, full-width"
+          />
+        </VBox>
+      </HBox>
+      <HBox
+        styleClass="action-panel, filter-panel-last"
+      >
+        <Button
+          text="filter"
+          styleClass="action-button"
+          onAction="#handleFilter"
+        />
+        <Button
+          text="clear"
+          styleClass="action-button"
+          onAction="#handleClear"
+        />
+        <Button
+          text="new"
+          styleClass="action-button"
+          onAction="#handleRedirectNew"
+        />
+        <Button
+          text="edit"
+          styleClass="action-button"
+          onAction="#handleEdit"
+        />
+        <Button
+          text="delete"
+          styleClass="action-button"
+          onAction="#handleDelete"
+        />
+      </HBox>
+    </VBox>
+  </bottom>
+</BorderPane>

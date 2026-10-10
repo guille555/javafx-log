@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox
+  xmlns:fx="http://javafx.com/fxml"
+  stylesheets="@css/app.css"
+  styleClass="sidebar"
+  fx:controller="dev.sprout.main.controller.SidebarViewController"
+>
+  <ImageView
+    fx:id="imgLogoContainer"
+    styleClass="sidebar-logo"
+  >
+    <image>
+      <Image
+        url="@img/logo.png"
+      />
+    </image>
+  </ImageView>
+  <Separator
+    styleClass="separator"
+  />
+  <Button
+    text="Entries"
+    styleClass="sidebar-button"
+    onAction="#handleRedirectEntries"
+  />
+  <Button
+    text="Contacts"
+    styleClass="sidebar-button"
+    onAction="#handleRedirectContacts"
+  />
+  <Button
+    text="Photos"
+    styleClass="sidebar-button"
+    onAction="#handleRedirectPhotos"
+  />
+</VBox>

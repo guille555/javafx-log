@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane
+  xmlns:fx="http://javafx.com/fxml"
+  stylesheets="@css/app.css"
+  styleClass="photo-media-player"
+  fx:controller="dev.sprout.main.controller.PhotoMediaPlayerController"
+>
+  <top>
+    <HBox
+      alignment="CENTER"
+      styleClass="photo-media-player-top"
+    >
+      <Label
+        fx:id="labelTitle"
+        text="Photo" 
+        styleClass="photo-media-player-top-label"
+      />
+    </HBox>
+  </top>
+  <center>
+    <StackPane styleClass="photo-media-player-center">
+      <ImageView
+        fx:id="imageViewer"
+        preserveRatio="true"
+        fitWidth="620" fitHeight="420"
+      />
+    </StackPane>
+  </center>
+  <bottom>
+    <HBox
+      alignment="CENTER"
+      styleClass="photo-media-player-bottom"
+    >
+      <Button
+        fx:id="buttonPrevious"
+        text="◁"
+        styleClass="button-previous"
+      />
+      <Button
+        fx:id="buttonNext"
+        text="▷"
+        styleClass="button-next"/>
+    </HBox>
+  </bottom>
+</BorderPane>

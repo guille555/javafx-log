@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane
+  xmlns:fx="http://javafx.com/fxml"
+  stylesheets="@css/app.css"
+>
+  <left>
+    <fx:include source="SidebarView.fxml"/>
+  </left>
+
+  <top>
+    <HBox styleClass="header-panel">
+      <Label text="Contact" styleClass="app-title"/>
+    </HBox>
+  </top>
+
+  <center>
+    <VBox style="-fx-padding: 0 16 0 16">
+      <VBox styleClass="form_field_container" >
+        <Label text="Lastname:" styleClass="formLabel_new" />
+        <TextField fx:id="lastname" styleClass="form_text_field" />
+      </VBox>
+      <VBox styleClass="form_field_container" >
+        <Label text="Firstname:" styleClass="formLabel_new" />
+        <TextField fx:id="firstname" styleClass="form_text_field" />
+      </VBox>
+      <VBox styleClass="form_field_container" >
+        <Label text="Phone number:" styleClass="formLabel_new" />
+        <TextField fx:id="phoneNumber" styleClass="form_text_field" />
+      </VBox>
+      <VBox styleClass="form_field_container" >
+        <Label text="Email:" styleClass="formLabel_new" />
+        <TextField fx:id="email" styleClass="form_text_field" />
+      </VBox>
+      <HBox>
+        <Button text="return" styleClass="form_button" />
+      </HBox>
+    </VBox>
+  </center>
+
+  <bottom>
+    <VBox styleClass="footer-empty" />
+  </bottom>
+</BorderPane>

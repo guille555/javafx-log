@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane
+  xmlns:fx="http://javafx.com/fxml"
+  stylesheets="@css/app.css"
+  fx:controller="dev.sprout.main.controller.ContactPanelController"
+>
+  <left>
+    <fx:include
+      source="SidebarView.fxml"
+    />
+  </left>
+  <top>
+    <HBox
+      styleClass="header-panel"
+    >
+      <Label
+        text="Contacts"
+        styleClass="app-title"
+      />
+    </HBox>
+  </top>
+  <center>
+    <VBox
+      styleClass="table-container"
+    >
+      <TableView
+        fx:id="tableContacts"
+        VBox.vgrow="ALWAYS"
+      >
+        <columns>
+          <TableColumn
+            fx:id="columnLastname"
+            text="LASTNAME"
+            prefWidth="265"
+          />
+          <TableColumn
+            fx:id="columnFirstname"
+            text="FIRSTNAME"
+            prefWidth="265"
+          />
+        </columns>
+      </TableView>
+    </VBox>
+  </center>
+  <bottom>
+    <VBox>
+      <HBox
+        styleClass="action-panel, filter-panel-first"
+      >
+        <VBox
+          styleClass="form_field_container"
+        >
+          <Label
+            text="lastname:"
+            styleClass="filter-field"
+          />
+          <TextField
+            fx:id="textLastname"
+            styleClass="text-field, text-field-2c"
+          />
+        </VBox>
+        <VBox>
+          <Label
+            text="firstname:"
+            styleClass="filter-field"
+          />
+          <TextField
+            fx:id="textFirstname"
+            styleClass="text-field, text-field-2c"
+          />
+        </VBox>
+      </HBox>
+      <HBox
+        styleClass="action-panel, filter-panel-last"
+      >
+        <Button
+          text="filter"
+          styleClass="action-button"
+          onAction="#handleFilter"
+        />
+        <Button
+          text="clear"
+          styleClass="action-button"
+          onAction="#handleClear"
+        />
+        <Button
+          text="new"
+          styleClass="action-button"
+          onAction="#handleRedirectNew"
+        />
+        <Button
+          text="edit"
+          styleClass="action-button"
+          onAction="#handleEdit"
+        />
+        <Button
+          text="delete"
+          styleClass="action-button"
+          onAction="#handleDelete"
+        />
+      </HBox>
+    </VBox>
+  </bottom>
+</BorderPane>
